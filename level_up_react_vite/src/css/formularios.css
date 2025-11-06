@@ -1,0 +1,275 @@
+/* ============================================================
+   LEVEL-UP GAMER - FORMULARIOS
+   Archivo: formularios.css
+   Descripción: Estilos para todos los formularios del sitio
+   ============================================================ */
+
+/* ==================== CONTENEDOR DE FORMULARIO ==================== */
+.contenedor-formulario {
+  max-width: 500px;
+  margin: var(--espacio-xxl) auto;
+  padding: var(--espacio-xl);
+  background-color: var(--fondo-tarjeta);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-lg);
+}
+
+.encabezado-formulario {
+  text-align: center;
+  margin-bottom: var(--espacio-xl);
+}
+
+.logo-formulario {
+  width: 80px;
+  height: 80px;
+  margin-bottom: var(--espacio-md);
+}
+
+.titulo-formulario {
+  font-size: var(--texto-2xl);
+  color: var(--azul-electrico);
+  margin-bottom: var(--espacio-sm);
+}
+
+.subtitulo-formulario {
+  color: var(--texto-secundario);
+  font-size: var(--texto-sm);
+}
+
+/* ==================== GRUPOS DE FORMULARIO ==================== */
+.grupo-formulario {
+  margin-bottom: var(--espacio-lg);
+}
+
+.etiqueta-formulario {
+  display: block;
+  color: var(--texto-principal);
+  font-weight: 500;
+  margin-bottom: var(--espacio-xs);
+  font-size: var(--texto-sm);
+}
+
+.etiqueta-formulario.requerido::after {
+  content: " *";
+  color: var(--color-error);
+}
+
+/* ==================== INPUTS ==================== */
+.control-formulario {
+  width: 100%;
+  padding: var(--espacio-sm) var(--espacio-md);
+  background-color: var(--fondo-secundario);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-sm);
+  color: var(--texto-principal);
+  font-size: var(--texto-base);
+  transition: var(--transicion-normal);
+}
+
+.control-formulario:focus {
+  outline: none;
+  border-color: var(--azul-electrico);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+}
+
+.control-formulario:disabled {
+  background-color: var(--fondo-principal);
+  color: var(--texto-deshabilitado);
+  cursor: not-allowed;
+}
+
+.control-formulario.invalido {
+  border-color: var(--color-error);
+}
+
+.control-formulario.valido {
+  border-color: var(--color-exito);
+}
+
+/* ==================== SELECT ==================== */
+.select-formulario {
+  width: 100%;
+  padding: var(--espacio-sm) var(--espacio-md);
+  background-color: var(--fondo-secundario);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-sm);
+  color: var(--texto-principal);
+  font-size: var(--texto-base);
+  cursor: pointer;
+  transition: var(--transicion-normal);
+}
+
+.select-formulario:focus {
+  outline: none;
+  border-color: var(--azul-electrico);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+}
+
+/* ==================== TEXTAREA ==================== */
+.area-texto-formulario {
+  width: 100%;
+  padding: var(--espacio-sm) var(--espacio-md);
+  background-color: var(--fondo-secundario);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-sm);
+  color: var(--texto-principal);
+  font-size: var(--texto-base);
+  font-family: var(--fuente-principal);
+  resize: vertical;
+  min-height: 120px;
+  transition: var(--transicion-normal);
+}
+
+.area-texto-formulario:focus {
+  outline: none;
+  border-color: var(--azul-electrico);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);
+}
+
+/* ==================== CHECKBOX Y RADIO ==================== */
+.check-formulario {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  margin-bottom: var(--espacio-md);
+}
+
+.input-check-formulario {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--azul-electrico);
+}
+
+.etiqueta-check-formulario {
+  color: var(--texto-secundario);
+  font-size: var(--texto-sm);
+  cursor: pointer;
+}
+
+/* ==================== MENSAJES DE AYUDA Y ERROR ==================== */
+.texto-formulario {
+  display: block;
+  margin-top: var(--espacio-xs);
+  font-size: var(--texto-xs);
+  color: var(--texto-secundario);
+}
+
+.retroalimentacion-invalida {
+  display: none;
+  margin-top: var(--espacio-xs);
+  font-size: var(--texto-xs);
+  color: var(--color-error);
+}
+
+.control-formulario.invalido ~ .retroalimentacion-invalida {
+  display: block;
+}
+
+.retroalimentacion-valida {
+  display: none;
+  margin-top: var(--espacio-xs);
+  font-size: var(--texto-xs);
+  color: var(--color-exito);
+}
+
+.control-formulario.valido ~ .retroalimentacion-valida {
+  display: block;
+}
+
+/* ==================== BOTONES DE FORMULARIO ==================== */
+.acciones-formulario {
+  display: flex;
+  gap: var(--espacio-md);
+  margin-top: var(--espacio-xl);
+}
+
+.btn-enviar {
+  flex: 1;
+  padding: var(--espacio-md);
+  background-color: var(--azul-electrico);
+  color: #000;
+  border: none;
+  border-radius: var(--radio-sm);
+  font-size: var(--texto-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicion-normal);
+}
+
+.btn-enviar:hover {
+  background-color: var(--verde-neon);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-neon-verde);
+}
+
+.btn-enviar:disabled {
+  background-color: var(--borde-claro);
+  color: var(--texto-deshabilitado);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-cancelar {
+  flex: 1;
+  padding: var(--espacio-md);
+  background-color: transparent;
+  color: var(--texto-secundario);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-sm);
+  font-size: var(--texto-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicion-normal);
+}
+
+.btn-cancelar:hover {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+/* ==================== FORMULARIO DE BÚSQUEDA ==================== */
+.formulario-busqueda {
+  display: flex;
+  gap: var(--espacio-sm);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-busqueda {
+  flex: 1;
+  padding: var(--espacio-sm) var(--espacio-md);
+  background-color: var(--fondo-secundario);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-sm);
+  color: var(--texto-principal);
+  font-size: var(--texto-base);
+}
+
+.btn-busqueda {
+  padding: var(--espacio-sm) var(--espacio-lg);
+  background-color: var(--azul-electrico);
+  color: #000;
+  border: none;
+  border-radius: var(--radio-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicion-normal);
+}
+
+.btn-busqueda:hover {
+  background-color: var(--verde-neon);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .contenedor-formulario {
+    margin: var(--espacio-md);
+    padding: var(--espacio-md);
+  }
+
+  .acciones-formulario {
+    flex-direction: column;
+  }
+}

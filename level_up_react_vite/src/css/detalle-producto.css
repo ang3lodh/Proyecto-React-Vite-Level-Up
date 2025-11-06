@@ -1,0 +1,165 @@
+/* ==============================================
+   ESTILOS DE LA PÁGINA DE DETALLE DE PRODUCTO
+   ============================================== */
+
+.detalle-producto {
+    padding: 3rem 0;
+}
+
+/* Galería de imágenes */
+.galeria-producto {
+    margin-bottom: 2rem;
+}
+
+.imagen-principal {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.imagen-principal img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1.5rem;
+    background: #000;
+}
+
+.miniaturas {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+}
+
+.miniatura {
+    width: 80px;
+    height: 60px; /* Mantener relación de aspecto */
+    object-fit: contain;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.25rem;
+}
+
+.miniatura:hover,
+.miniatura.activa {
+    border-color: var(--electric-blue);
+    transform: scale(1.05);
+}
+
+/* Información del producto */
+.info-producto {
+    background: var(--bg-darker);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.titulo-producto {
+    font-size: 2rem;
+    color: var(--electric-blue);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.codigo-producto {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.precio-producto {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    margin: 1.5rem 0;
+}
+
+.descripcion-producto {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Selector de cantidad */
+.selector-cantidad {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.selector-cantidad label {
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.contador button {
+    background: #2a2a2a;
+    border: none;
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contador button:hover {
+    background: #333;
+    color: var(--electric-blue);
+}
+
+.contador input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #2a2a2a;
+    border-right: 1px solid #2a2a2a;
+    background: #1a1a1a;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Botones de acción */
+.botones-accion {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Versión móvil */
+@media (max-width: 768px) {
+    .imagen-principal {
+        height: 300px;
+    }
+    
+    .botones-accion {
+        flex-direction: column;
+    }
+    
+    .botones-accion .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,157 @@
+/* ============================================================
+   LEVEL-UP GAMER - PÁGINA PRINCIPAL
+   Archivo: inicio.css
+   Descripción: Estilos para la página de inicio
+   ============================================================ */
+
+/* ==================== SECCIÓN HERO ==================== */
+.seccion-hero {
+  background: linear-gradient(135deg, var(--fondo-principal) 0%, var(--fondo-secundario) 100%);
+  padding: var(--espacio-xxl) 0;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo-hero {
+  font-size: var(--texto-3xl);
+  color: var(--verde-neon);
+  text-shadow: var(--sombra-neon-verde);
+  margin-bottom: var(--espacio-lg);
+}
+
+.subtitulo-hero {
+  font-size: var(--texto-lg);
+  color: var(--texto-secundario);
+  margin-bottom: var(--espacio-xl);
+  line-height: 1.8;
+}
+
+.botones-hero {
+  display: flex;
+  gap: var(--espacio-md);
+  flex-wrap: wrap;
+}
+
+.imagen-hero {
+  text-align: center;
+}
+
+.imagen-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radio-lg);
+  box-shadow: var(--sombra-lg);
+}
+
+/* ==================== CATEGORÍAS DESTACADAS ==================== */
+.seccion-categorias {
+  padding: var(--espacio-xxl) 0;
+  background-color: var(--fondo-secundario);
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: var(--texto-2xl);
+  color: var(--azul-electrico);
+  margin-bottom: var(--espacio-xl);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espacio-lg);
+  margin-top: var(--espacio-xl);
+}
+
+.tarjeta-categoria {
+  background-color: var(--fondo-tarjeta);
+  border: 2px solid var(--borde-claro);
+  border-radius: var(--radio-md);
+  padding: var(--espacio-xl);
+  text-align: center;
+  transition: var(--transicion-normal);
+  cursor: pointer;
+}
+
+.tarjeta-categoria:hover {
+  transform: translateY(-10px);
+  border-color: var(--azul-electrico);
+  box-shadow: var(--sombra-neon-azul);
+}
+
+.icono-categoria {
+  font-size: 3rem;
+  margin-bottom: var(--espacio-md);
+}
+
+.titulo-categoria {
+  font-size: var(--texto-xl);
+  color: var(--texto-principal);
+  margin-bottom: var(--espacio-sm);
+}
+
+.descripcion-categoria {
+  color: var(--texto-secundario);
+  font-size: var(--texto-sm);
+}
+
+/* ==================== PRODUCTOS DESTACADOS ==================== */
+.productos-destacados {
+  padding: var(--espacio-xxl) 0;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--espacio-lg);
+  margin-top: var(--espacio-xl);
+}
+
+/* ==================== PIE DE PÁGINA ==================== */
+.pie-pagina {
+  background-color: var(--fondo-secundario);
+  border-top: 2px solid var(--borde-claro);
+  padding: var(--espacio-xl) 0;
+  margin-top: var(--espacio-xxl);
+  text-align: center;
+}
+
+.contenido-pie {
+  color: var(--texto-secundario);
+  font-size: var(--texto-sm);
+}
+
+.enlaces-pie {
+  display: flex;
+  justify-content: center;
+  gap: var(--espacio-lg);
+  margin-top: var(--espacio-md);
+  flex-wrap: wrap;
+}
+
+.enlace-pie {
+  color: var(--texto-secundario);
+  transition: var(--transicion-normal);
+}
+
+.enlace-pie:hover {
+  color: var(--azul-electrico);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .titulo-hero {
+    font-size: var(--texto-2xl);
+  }
+
+  .botones-hero {
+    flex-direction: column;
+  }
+
+  .grid-categorias {
+    grid-template-columns: 1fr;
+  }
+}

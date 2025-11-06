@@ -1,0 +1,117 @@
+/* ==============================================
+   ESTILOS DE LA PÁGINA DE PRODUCTOS
+   ============================================== */
+
+/* Contenedor de productos */
+.productos-container {
+    padding: 2rem 0;
+}
+
+/* Filtros */
+.filtros {
+    background: var(--bg-darker);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+}
+
+.filtros h3 {
+    color: var(--electric-blue);
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Grid de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+    background: var(--bg-darker);
+    border: 1px solid white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--electric-blue);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; 
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    border-bottom: 1px solid #333;
+}
+
+.producto-imagen img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste manteniendo su relación de aspecto */
+    padding: 1rem;
+    background: #000;
+}
+
+.producto-info {
+    padding: 1.25rem;
+}
+
+.producto-nombre {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+.producto-precio {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--neon-green);
+    margin: 0.5rem 0;
+}
+
+.producto-descripcion {
+    color: #e0e0e0; 
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+/* Botones de acción */
+.producto-acciones {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .producto-acciones {
+        flex-direction: column;
+    }
+    
+    .producto-acciones .btn {
+        width: 100%;
+    }
+}

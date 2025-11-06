@@ -1,0 +1,164 @@
+/* ============================================================
+   LEVEL-UP GAMER - ESTILOS GLOBALES
+   Archivo: global.css
+   Descripción: Reset, estilos base y utilidades globales
+   ============================================================ */
+
+/* ==================== RESET Y BASE ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--fondo-principal);
+  color: var(--texto-principal);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ==================== TIPOGRAFÍA ==================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--espacio-md);
+  letter-spacing: 1px;
+}
+
+h1 { font-size: var(--texto-3xl); }
+h2 { font-size: var(--texto-2xl); }
+h3 { font-size: var(--texto-xl); }
+h4 { font-size: var(--texto-lg); }
+h5 { font-size: var(--texto-base); }
+h6 { font-size: var(--texto-sm); }
+
+p {
+  margin-bottom: var(--espacio-md);
+}
+
+a {
+  color: var(--azul-electrico);
+  text-decoration: none;
+  transition: var(--transicion-normal);
+}
+
+a:hover {
+  color: var(--verde-neon);
+}
+
+/* ==================== CLASES DE UTILIDAD ==================== */
+
+/* --- Colores de Texto --- */
+.texto-primario { color: var(--azul-electrico); }
+.texto-exito { color: var(--color-exito); }
+.texto-error { color: var(--color-error); }
+.texto-advertencia { color: var(--color-advertencia); }
+.texto-neon { color: var(--verde-neon); }
+.texto-electrico { color: var(--azul-electrico); }
+
+/* --- Fondos --- */
+.bg-oscuro { background-color: var(--fondo-principal); }
+.bg-oscuro-secundario { background-color: var(--fondo-secundario); }
+.bg-tarjeta { background-color: var(--fondo-tarjeta); }
+
+/* --- Espaciados --- */
+.mt-1 { margin-top: var(--espacio-sm); }
+.mt-2 { margin-top: var(--espacio-md); }
+.mt-3 { margin-top: var(--espacio-lg); }
+.mb-1 { margin-bottom: var(--espacio-sm); }
+.mb-2 { margin-bottom: var(--espacio-md); }
+.mb-3 { margin-bottom: var(--espacio-lg); }
+
+.p-1 { padding: var(--espacio-sm); }
+.p-2 { padding: var(--espacio-md); }
+.p-3 { padding: var(--espacio-lg); }
+
+/* --- Contenedores --- */
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--espacio-md);
+}
+
+.contenedor-fluido {
+  width: 100%;
+  padding: 0 var(--espacio-md);
+}
+
+/* --- Botones Base --- */
+.btn {
+  display: inline-block;
+  padding: var(--espacio-sm) var(--espacio-lg);
+  border: none;
+  border-radius: var(--radio-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transicion-normal);
+  text-align: center;
+  font-size: var(--texto-base);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-md);
+}
+
+.btn-primario {
+  background-color: var(--azul-electrico);
+  color: #000;
+}
+
+.btn-exito {
+  background-color: var(--color-exito);
+  color: #fff;
+}
+
+.btn-error {
+  background-color: var(--color-error);
+  color: #fff;
+}
+
+.btn-contorno {
+  background-color: transparent;
+  border: 2px solid var(--azul-electrico);
+  color: var(--azul-electrico);
+}
+
+.btn-contorno:hover {
+  background-color: var(--azul-electrico);
+  color: #000;
+}
+
+/* --- Tarjetas --- */
+.tarjeta {
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-claro);
+  border-radius: var(--radio-md);
+  padding: var(--espacio-lg);
+  transition: var(--transicion-normal);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-lg);
+  border-color: var(--azul-electrico);
+}
+
+/* --- Efectos Neón --- */
+.brillo-neon {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.borde-neon {
+  border: 2px solid var(--verde-neon);
+  box-shadow: var(--sombra-neon-verde);
+}
+
+.borde-electrico {
+  border: 2px solid var(--azul-electrico);
+  box-shadow: var(--sombra-neon-azul);
+}

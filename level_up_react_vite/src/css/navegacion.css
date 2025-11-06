@@ -1,0 +1,117 @@
+/* ============================================================
+   LEVEL-UP GAMER - BARRA DE NAVEGACIÓN
+   Archivo: navegacion.css
+   Descripción: Estilos para el header y menú de navegación
+   ============================================================ */
+
+/* ==================== HEADER PRINCIPAL ==================== */
+.barra-navegacion {
+  background-color: var(--fondo-secundario);
+  border-bottom: 2px solid var(--borde-claro);
+  padding: var(--espacio-md) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--sombra-md);
+}
+
+/* ==================== LOGO ==================== */
+.marca-navegacion {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-sm);
+  font-family: var(--fuente-titulos);
+  font-size: var(--texto-xl);
+  color: var(--verde-neon);
+  text-shadow: var(--sombra-neon-verde);
+}
+
+.marca-navegacion img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.marca-navegacion:hover {
+  color: var(--azul-electrico);
+  text-shadow: var(--sombra-neon-azul);
+}
+
+/* ==================== MENÚ DE NAVEGACIÓN ==================== */
+.menu-navegacion {
+  display: flex;
+  list-style: none;
+  gap: var(--espacio-md);
+  align-items: center;
+}
+
+.elemento-menu {
+  position: relative;
+}
+
+.enlace-menu {
+  color: var(--texto-principal);
+  padding: var(--espacio-sm) var(--espacio-md);
+  border-radius: var(--radio-sm);
+  transition: var(--transicion-normal);
+  font-weight: 500;
+}
+
+.enlace-menu:hover {
+  color: var(--azul-electrico);
+  background-color: rgba(30, 144, 255, 0.1);
+}
+
+.enlace-menu.activo {
+  color: var(--verde-neon);
+  background-color: rgba(57, 255, 20, 0.1);
+}
+
+/* ==================== CARRITO EN NAVBAR ==================== */
+.icono-carrito {
+  position: relative;
+  padding: var(--espacio-sm);
+  border: 2px solid var(--azul-electrico);
+  border-radius: var(--radio-sm);
+  transition: var(--transicion-normal);
+}
+
+.icono-carrito:hover {
+  background-color: var(--azul-electrico);
+  color: #000;
+  box-shadow: var(--sombra-neon-azul);
+}
+
+.insignia-carrito {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--color-error);
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: var(--texto-xs);
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .toggle-menu {
+    display: block;
+  }
+
+  .menu-colapsado {
+    display: none;
+  }
+
+  .menu-colapsado.mostrar {
+    display: block;
+  }
+
+  .menu-navegacion {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

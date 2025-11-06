@@ -1,0 +1,179 @@
+
+
+/* ==================== MÓVILES PEQUEÑOS (< 576px) ==================== */
+@media (max-width: 575px) {
+  /* Tipografía */
+  h1 { font-size: var(--texto-2xl); }
+  h2 { font-size: var(--texto-xl); }
+  h3 { font-size: var(--texto-lg); }
+
+  /* Espaciados */
+  .contenedor {
+    padding: 0 var(--espacio-sm);
+  }
+
+  /* Botones */
+  .btn {
+    width: 100%;
+    padding: var(--espacio-md);
+  }
+
+  /* Hero */
+  .seccion-hero {
+    padding: var(--espacio-xl) 0;
+  }
+
+  .botones-hero {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Productos */
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Formularios */
+  .contenedor-formulario {
+    padding: var(--espacio-md);
+    margin: var(--espacio-md);
+  }
+}
+
+/* ==================== MÓVILES (576px - 767px) ==================== */
+@media (min-width: 576px) and (max-width: 767px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==================== TABLETS (768px - 991px) ==================== */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Navbar */
+  .menu-navegacion {
+    gap: var(--espacio-sm);
+  }
+
+  /* Productos */
+  .grid-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Carrito */
+  .layout-carrito {
+    grid-template-columns: 1fr;
+  }
+
+  /* Admin */
+  .barra-lateral-admin {
+    width: 220px;
+  }
+
+  .contenido-admin {
+    margin-left: 220px;
+  }
+}
+
+/* ==================== DESKTOP PEQUEÑO (992px - 1199px) ==================== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contenedor {
+    max-width: 960px;
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==================== DESKTOP GRANDE (>= 1200px) ==================== */
+@media (min-width: 1200px) {
+  .contenedor {
+    max-width: 1140px;
+  }
+
+  .grid-productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==================== ORIENTACIÓN ==================== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .seccion-hero {
+    min-height: auto;
+    padding: var(--espacio-lg) 0;
+  }
+
+  .contenido-modal {
+    max-height: 80vh;
+  }
+}
+
+/* ==================== MODO OSCURO (Preferencia del sistema) ==================== */
+@media (prefers-color-scheme: dark) {
+  /* Ya estamos en modo oscuro por defecto */
+}
+
+/* ==================== REDUCCIÓN DE MOVIMIENTO ==================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================== IMPRESIÓN ==================== */
+@media print {
+  .barra-navegacion,
+  .pie-pagina,
+  .btn,
+  .barra-lateral-admin {
+    display: none !important;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  .contenido-admin {
+    margin-left: 0;
+  }
+}
+
+/* ==================== UTILIDADES RESPONSIVE ==================== */
+/* Ocultar en móvil */
+@media (max-width: 767px) {
+  .ocultar-movil {
+    display: none !important;
+  }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 992px) {
+  .ocultar-desktop {
+    display: none !important;
+  }
+}
+
+/* Mostrar solo en móvil */
+.mostrar-movil {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .mostrar-movil {
+    display: block !important;
+  }
+}
+
+/* Texto centrado en móvil */
+@media (max-width: 767px) {
+  .texto-centrado-movil {
+    text-align: center !important;
+  }
+}

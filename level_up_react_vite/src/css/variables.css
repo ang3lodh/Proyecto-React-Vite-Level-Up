@@ -1,0 +1,74 @@
+/* ============================================================
+   LEVEL-UP GAMER - VARIABLES CSS
+   Archivo: variables.css
+   Descripción: Todas las variables de colores, tamaños y efectos
+   ============================================================ */
+
+:root {
+  /* ==================== COLORES ==================== */
+
+  /* --- Fondos --- */
+  --fondo-principal: #000000;        /* Fondo negro principal */
+  --fondo-secundario: #0a0a0a;       /* Fondo más oscuro para secciones */
+  --fondo-tarjeta: #1a1a1a;          /* Fondo de tarjetas */
+
+  /* --- Textos --- */
+  --texto-principal: #FFFFFF;        /* Texto blanco principal */
+  --texto-secundario: #D3D3D3;       /* Texto gris claro */
+  --texto-deshabilitado: #888888;    /* Texto gris oscuro */
+
+  /* --- Colores de Marca --- */
+  --azul-electrico: #1E90FF;         /* Color primario azul */
+  --verde-neon: #39FF14;             /* Color secundario verde */
+  --rosa-neon: #FF00FF;              /* Color decorativo rosa */
+  --purpura-neon: #b300ff;           /* Color decorativo púrpura */
+
+  /* --- Colores de Estado --- */
+  --color-exito: #00c853;            /* Verde para éxito */
+  --color-error: #ff3d00;            /* Rojo para errores */
+  --color-advertencia: #ffab00;      /* Amarillo para alertas */
+  --color-info: #0091ea;             /* Azul para información */
+
+  /* --- Bordes --- */
+  --borde-claro: #333333;            /* Borde gris oscuro */
+  --borde-medio: #555555;            /* Borde gris medio */
+
+  /* ==================== ESPACIADOS ==================== */
+  --espacio-xs: 0.25rem;    /* 4px */
+  --espacio-sm: 0.5rem;     /* 8px */
+  --espacio-md: 1rem;       /* 16px */
+  --espacio-lg: 1.5rem;     /* 24px */
+  --espacio-xl: 2rem;       /* 32px */
+  --espacio-xxl: 3rem;      /* 48px */
+
+  /* ==================== TIPOGRAFÍA ==================== */
+  --fuente-principal: 'Roboto', sans-serif;
+  --fuente-titulos: 'Orbitron', sans-serif;
+
+  --texto-xs: 0.75rem;      /* 12px */
+  --texto-sm: 0.875rem;     /* 14px */
+  --texto-base: 1rem;       /* 16px */
+  --texto-lg: 1.125rem;     /* 18px */
+  --texto-xl: 1.25rem;      /* 20px */
+  --texto-2xl: 1.5rem;      /* 24px */
+  --texto-3xl: 2rem;        /* 32px */
+
+  /* ==================== BORDES REDONDEADOS ==================== */
+  --radio-sm: 4px;
+  --radio-md: 8px;
+  --radio-lg: 12px;
+  --radio-xl: 16px;
+
+  /* ==================== SOMBRAS ==================== */
+  --sombra-sm: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --sombra-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --sombra-lg: 0 8px 16px rgba(0, 0, 0, 0.25);
+
+  --sombra-neon-azul: 0 0 10px rgba(30, 144, 255, 0.5);
+  --sombra-neon-verde: 0 0 10px rgba(57, 255, 20, 0.5);
+
+  /* ==================== TRANSICIONES ==================== */
+  --transicion-rapida: 0.15s ease-in-out;
+  --transicion-normal: 0.3s ease-in-out;
+  --transicion-lenta: 0.5s ease-in-out;
+}
